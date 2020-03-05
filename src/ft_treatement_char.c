@@ -1,14 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_traitement_char.c                               :+:      :+:    :+:   */
+/*   ft_treatement_char.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jumourot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/26 13:49:34 by jumourot          #+#    #+#             */
-/*   Updated: 2020/03/02 17:19:44 by jumourot         ###   ########.fr       */
+/*   Created: 2020/03/05 11:04:19 by jumourot          #+#    #+#             */
+/*   Updated: 2020/03/05 11:04:21 by jumourot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include <unistd.h>
 #include <stdio.h>
@@ -27,39 +28,39 @@ int			ft_putchar_width(int c, int width)
 	while (++i < width)
 		ft_putchar(' ');
 	ft_putchar(c);
-	return (1);
+	return (width);
 }
 
-int			ft_putchar_width_prec(int c, int width)
+int			ft_putchar_width_neg(int c, int width)
 {
 	int		i;
 
-	i = 0;
-	while (i < width)
-		i++;
 	ft_putchar(c);
-	return (1);
+	i = 1;
+	while (i < len)
+		i++;
+	return (width);
 }
 
-int			ft_putchar_zero(int c, int zero)
+int			ft_putchar_zero(int c, int width)
 {
 	int		i;
 	
 	i = 0;
-	while (++i < zero)
+	while (++i < zero || c != '\0')
 		ft_putchar('0');
 	ft_putchar(c);
-	return (1);
+	return (width);
 }
 
-int			ft_printf_char(int c, const char *s)
-{	
-	int		i;
-
-	return (1);
-}
-
-int			main()
+int			ft_print_char(const char c, t_flags flags)
 {
-	return (0);
+	if (flags.width == 0 && flags.neg == 1)
+		return (ft_putchar_width_neg(c, width));
+	if else (flags.width == 0 && flags.zero == 1)
+		return (ft_putchar_zero(c, width));
+	if else (flags.width == 1)
+		return (ft_putchar_width(c, width));
+	else
+		ft_putchar(c);
 }

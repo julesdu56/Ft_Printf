@@ -1,28 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_treatement_d_and_i.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jumourot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/26 13:46:11 by jumourot          #+#    #+#             */
-/*   Updated: 2020/02/26 13:47:11 by jumourot         ###   ########.fr       */
+/*   Created: 2020/03/05 11:04:27 by jumourot          #+#    #+#             */
+/*   Updated: 2020/03/05 11:04:29 by jumourot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
 
-#include <stdarg.h>
+#include "../libft/libft.a"
 
-typedef struct  s_flags
+int			ft_putstr(const char *str)
 {
-    int         type;
-    int         width;
-    int         neg;
-    int         star;
-    int         zero;
-    int         dot;
-}               t_flags;
+	int		i;
 
+	i = 0;
+	while (str[i])
+	{
+		ft_putchar(str[i]);
+		i++;
+	}
+	return (1);
+}
 
+int			ft_putstr_width(const char *str, int width)
+{
+	while (str[i])
+	{
+		while (

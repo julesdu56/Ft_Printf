@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print.c                                         :+:      :+:    :+:   */
+/*   ft_treatement_string.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jumourot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/19 14:08:15 by jumourot          #+#    #+#             */
-/*   Updated: 2020/03/02 14:48:10 by jumourot         ###   ########.fr       */
+/*   Created: 2020/03/05 11:04:40 by jumourot          #+#    #+#             */
+/*   Updated: 2020/03/05 11:04:42 by jumourot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
-#include <stdarg.h>
 
-int		main()
+int			ft_putstr(const char *str)
 {
-	printf("%9c", 'r');
-	return (0);
-}
+	int		i;
+
+	i = 0;
+	while (str[i])
+	{
+
