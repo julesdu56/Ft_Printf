@@ -15,11 +15,12 @@ NAME = libftprintf.a
 CFLAGS = gcc -Wall -Wextra -Werror
 
 SRCS = 	./src/ft_printf.c\
-				./src/ft_treatement.c\
-				./src/ft_treatement_char.c\
-				./src/ft_treatement_string.c\
-				./src/ft_treatement_i_and_d.c\
-				./src/main.c
+	./src/ft_treatement.c\
+	./src/ft_treatement_char.c\
+	./src/ft_treatement_string.c\
+	./src/ft_treatement_i_and_d.c\
+	./src/ft_impress_buffer.c\
+	./src/main.c
 
 HEADER = include/libftprintf.h
 

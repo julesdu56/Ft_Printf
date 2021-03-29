@@ -24,3 +24,4 @@ typedef struct  s_flags
     int         prec;
 }               t_flags;
 
+#endif

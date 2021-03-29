@@ -1,33 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_treatement_d_and_i.c                            :+:      :+:    :+:   */
+/*   ft_find_index.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jumourot <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: julio <julio@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/05 11:04:27 by jumourot          #+#    #+#             */
-/*   Updated: 2020/03/05 11:04:29 by jumourot         ###   ########.fr       */
+/*   Created: 2021/03/02 14:37:05 by julio             #+#    #+#             */
+/*   Updated: 2021/03/04 11:31:26 by julio            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#include "../libft/libft.a"
-
-int			ft_putstr(const char *str)
+int     find_index(char *src, char c)
 {
-	int		i;
+    int i;
 
-	i = 0;
-	while (str[i])
-	{
-		ft_putchar(str[i]);
-		i++;
-	}
-	return (1);
+    i = 0;
+    if (src[i] == 'i')
+        return (0);
+    while (src[i])
+    {
+
+        if (src[i] == c)
+            return (i);
+        i++;
+    }
+    return (-1);
 }
-
-int			ft_putstr_width(const char *str, int width)
-{
-	while (str[i])
-	{
-		while (
